@@ -118,13 +118,13 @@ class CollectionTest extends TestCase
     }
 
     /**
-     * @dataProvider forAllDataProvider
+     * @dataProvider applyDataProvider
      */
-    public function testForAll($actual, $expected)
+    public function testApply($actual, $expected)
     {
         $collection = new Collection($actual);
 
-        $collection->forAll(function ($value) {
+        $collection->apply(function ($value) {
             return strtoupper($value);
         });
 
@@ -200,7 +200,7 @@ class CollectionTest extends TestCase
         );
     }
 
-    public function forAllDataProvider()
+    public function applyDataProvider()
     {
         return array(
             array(

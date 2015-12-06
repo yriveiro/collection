@@ -119,9 +119,9 @@ class Collection implements CollectionInterface
     * @param Closure $callable The callable to be apply to all items in the
     *                          collection.
     *
-    * @return yriveiro\Collection
+    * @return yriveiro\Collection\Collection
     */
-    public function forAll(Closure $callable)
+    public function apply(Closure $callable)
     {
         foreach ($this->items as $key => $item) {
             $this->set($key, $callable($item));

@@ -1,6 +1,8 @@
 <?php
 namespace yriveiro\Collection;
 
+use Closure;
+
 interface CollectionInterface extends \ArrayAccess, \Countable, \IteratorAggregate
 {
     public function set($key, $value = null);
@@ -17,4 +19,6 @@ interface CollectionInterface extends \ArrayAccess, \Countable, \IteratorAggrega
     public function has($key);
     public function isEmpty();
     public function count();
+
+    public function apply(Closure $callable);
 }
