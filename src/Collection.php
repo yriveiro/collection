@@ -131,6 +131,28 @@ class Collection implements CollectionInterface
     }
 
     /**
+     * Return the keys with its values that match the pattern.
+     *
+     * @param string $pattern
+     *
+     * @return mixed
+     */
+    public function match($pattern)
+    {
+        $self = $this;
+        $keys = $this->keys();
+        $pattern = trim($pattern, '/');
+
+        return array_reduce($keys, function ($carry, $key) use ($pattern, $self) {
+            if (preg_match("/$pattern/", $key)) {
+                $carry[$key] = $self->get($key);
+            }
+
+            return $carry;
+        }, array());
+    }
+
+    /**
      * Does this collection have a given key?
      *
      * @param  string $key

@@ -132,6 +132,18 @@ class CollectionTest extends TestCase
     }
 
     /**
+     * @dataProvider matchDataProvider
+     */
+    public function testMatch($actual, $expected)
+    {
+        $collection = new Collection($actual);
+
+        $matches = $collection->match('^__prefix');
+
+        $this->assertSame($expected, $matches);
+    }
+
+    /**
      * @dataProvider provideTestData
      */
     public function testCanClearCollection($items)
@@ -194,6 +206,23 @@ class CollectionTest extends TestCase
             array(
                 'actual' => array('a', 'b', 'c'),
                 'expected' => array('A', 'B', 'C')
+            )
+        );
+    }
+
+    public function matchDataProvider()
+    {
+        return array(
+            array(
+                'actual' => array(
+                    '__prefix_a' => 'a',
+                    '__prefix_b' => 'b',
+                    'c' => 'c'
+                ),
+                'expected' => array(
+                    '__prefix_a' => 'a',
+                    '__prefix_b' => 'b'
+                )
             )
         );
     }
