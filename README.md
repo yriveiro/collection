@@ -1,14 +1,14 @@
-yriveiro\\collection
---------------------
+Collection, A simple way to deal with data
+------------------------------------------
 
-Collection library for PHP compatible with php 5.3 >
+Collection works with PHP 5.3.9 or later and HHMV.
 
-[![Build Status](https://travis-ci.org/yriveiro/php-collection.svg?branch=master)](https://travis-ci.org/yriveiro/php-collection) [![Coverage Status](https://coveralls.io/repos/yriveiro/php-collection/badge.svg?branch=master&service=github)](https://coveralls.io/github/yriveiro/php-collection?branch=master) [![Total Downloads](https://poser.pugx.org/yriveiro/php-collection/downloads)](https://packagist.org/packages/yriveiro/php-collection)
+[![License](https://poser.pugx.org/yriveiro/php-collection/license)](https://packagist.org/packages/yriveiro/php-collection) [![Build Status](https://travis-ci.org/yriveiro/php-collection.svg?branch=master)](https://travis-ci.org/yriveiro/php-collection) [![Coverage Status](https://coveralls.io/repos/yriveiro/php-collection/badge.svg?branch=master&service=github)](https://coveralls.io/github/yriveiro/php-collection?branch=master) [![Total Downloads](https://poser.pugx.org/yriveiro/php-collection/downloads)](https://packagist.org/packages/yriveiro/php-collection)
 
-Install
--------
+Installation
+------------
 
-The simply way to install is through [composer](http://getcomposer.org/download/).
+The recommended way to install this package is through [Composer](http://getcomposer.org/download/).
 
 ```sh
 php composer.phar require "yriveiro/php-collection"
@@ -17,4 +17,4 @@ php composer.phar require "yriveiro/php-collection"
 License
 -------
 
-[![License](https://poser.pugx.org/yriveiro/php-collection/license)](https://packagist.org/packages/yriveiro/php-collection)
+Collection is licensed under MIT license.
