@@ -56,6 +56,16 @@ class Collection implements CollectionInterface
     }
 
     /**
+    * Get all keys in collection
+    *
+    * @return array
+    */
+    public function keys()
+    {
+        return array_keys($this->all());
+    }
+
+    /**
     * Removes an item from collection
     *
     * @param string $key

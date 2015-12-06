@@ -166,6 +166,13 @@ class CollectionTest extends TestCase
         $this->assertEquals(count($items), $iterations);
     }
 
+    public function testKeys()
+    {
+        $collection = new Collection(array('foo' => 'bar', 'foo2' => 'bar2'));
+
+        $this->assertSame(array('foo', 'foo2'), $collection->keys());
+    }
+
     public function provideTestData()
     {
         return array(

@@ -7,6 +7,7 @@ interface CollectionInterface extends \ArrayAccess, \Countable, \IteratorAggrega
 
     public function get($key, $default = null);
     public function all();
+    public function keys();
     public function getIterator();
 
     public function remove($key);
