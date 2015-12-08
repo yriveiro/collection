@@ -1,4 +1,4 @@
-0.2.0
+0.3.0
 -----
 
--	Rename forAll method as apply.
+-	Deprecate method apply in favour of each.
