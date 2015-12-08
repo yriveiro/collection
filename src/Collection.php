@@ -8,8 +8,8 @@ use yriveiro\Collection\CollectionInterface;
 class Collection implements CollectionInterface
 {
     /**
-    * @var array An array containing all items in collection
-    */
+     * @var array An array containing all items in collection
+     */
     protected $items = array();
 
     public function __construct(array $items = array())
@@ -18,13 +18,13 @@ class Collection implements CollectionInterface
     }
 
     /**
-    * Set collection item
-    *
-    * @param string $key
-    * @param mixed|null $value
-    *
-    * @return yriveiro\Collection\Collection
-    */
+     * Set collection item
+     *
+     * @param string $key
+     * @param mixed|null $value
+     *
+     * @return yriveiro\Collection\Collection
+     */
     public function set($key, $value = null)
     {
         $this->items[$key] = $value;
@@ -33,45 +33,45 @@ class Collection implements CollectionInterface
     }
 
     /**
-    * Get collection item for key
-    *
-    * @param string $key    The key
-    * @param mixed  $default The default value in case key does not exists.
-    *
-    * @return mixed The key value, otherwise, the default value.
-    */
+     * Get collection item for key
+     *
+     * @param string $key    The key
+     * @param mixed  $default The default value in case key does not exists.
+     *
+     * @return mixed The key value, otherwise, the default value.
+     */
     public function get($key, $default = null)
     {
         return $this->has($key) ? $this->items[$key] : $default;
     }
 
     /**
-    * Get all items in collection
-    *
-    * @return array
-    */
+     * Get all items in collection
+     *
+     * @return array
+     */
     public function all()
     {
         return $this->items;
     }
 
     /**
-    * Get all keys in collection
-    *
-    * @return array
-    */
+     * Get all keys in collection
+     *
+     * @return array
+     */
     public function keys()
     {
         return array_keys($this->all());
     }
 
     /**
-    * Removes an item from collection
-    *
-    * @param string $key
-    *
-    * @return yriveiro\Collection\Collection
-    */
+     * Removes an item from collection
+     *
+     * @param string $key
+     *
+     * @return yriveiro\Collection\Collection
+     */
     public function remove($key)
     {
         unset($this->items[$key]);
@@ -80,10 +80,10 @@ class Collection implements CollectionInterface
     }
 
     /**
-    *  Remove all items in the collection.
-    *
-    * @return yriveiro\Collection\Collection
-    */
+     *  Remove all items in the collection.
+     *
+     * @return yriveiro\Collection\Collection
+     */
     public function clear()
     {
         $this->items = array();
