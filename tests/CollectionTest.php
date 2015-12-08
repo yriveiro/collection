@@ -118,14 +118,14 @@ class CollectionTest extends TestCase
     }
 
     /**
-     * @dataProvider applyDataProvider
+     * @dataProvider eachDataProvider
      */
-    public function testApply($actual, $expected)
+    public function testEach($actual, $expected)
     {
         $collection = new Collection($actual);
 
-        $collection->apply(function ($value) {
-            return strtoupper($value);
+        $collection->each(function ($key, &$value) {
+            $value = strtoupper($value);
         });
 
         $this->assertSame($expected, $collection->all());
@@ -200,7 +200,7 @@ class CollectionTest extends TestCase
         );
     }
 
-    public function applyDataProvider()
+    public function eachDataProvider()
     {
         return array(
             array(

@@ -92,39 +92,42 @@ class Collection implements CollectionInterface
     }
 
     /**
-    * Does key exists in collection?
-    *
-    * @param $key
-    *
-    * @return bool
-    */
+     * Does key exists in collection?
+     *
+     * @param $key
+     *
+     * @return bool
+     */
     public function has($key)
     {
         return array_key_exists($key, $this->items);
     }
 
     /**
-    * Does key exists in collection?
-    *
-    * @param $key
-    *
-    * @return bool
-    */
+     * Does key exists in collection?
+     *
+     * @param $key
+     *
+     * @return bool
+     */
     public function isEmpty()
     {
         return $this->count() === 0;
     }
 
     /**
-    * @param Closure $callable The callable to be apply to all items in the
-    *                          collection.
-    *
-    * @return yriveiro\Collection\Collection
-    */
-    public function apply(Closure $callable)
+     * Apply the specified function to each item in the collection.
+     *
+     * @param \Closure $closure The function to apply to each item.
+     *                          The callable format must be arguments injected
+     *                          are: [$key, $item]
+     *
+     * @return yriveiro\Collection\Collection
+     */
+    public function each(Closure $callable)
     {
-        foreach ($this->items as $key => $item) {
-            $this->set($key, $callable($item));
+        foreach ($this->items as $key => &$item) {
+            $callable($key, $item);
         }
 
         return $this;

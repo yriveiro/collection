@@ -20,5 +20,5 @@ interface CollectionInterface extends \ArrayAccess, \Countable, \IteratorAggrega
     public function isEmpty();
     public function count();
 
-    public function apply(Closure $callable);
+    public function each(Closure $callable);
 }
