@@ -1,5 +1,5 @@
 <?php
-namespace yriveiro\Collection;
+namespace Yriveiro\Collection;
 
 use Closure;
 

@@ -1,16 +1,16 @@
 <?php
-namespace yriveiro\Collection\Tests;
+namespace Yriveiro\Collection\Tests;
 
-use yriveiro\Collection\Collection;
+use Yriveiro\Collection\Collection;
 use PHPUnit_Framework_TestCase as TestCase;
-use yriveiro\Collection\Tests\Resources\Bag;
+use Yriveiro\Collection\Tests\Resources\Bag;
 
 class CollectionTest extends TestCase
 {
     public function testCanExtendCollection()
     {
         $bag = new Bag();
-        $statement = is_subclass_of($bag, 'yriveiro\Collection\Collection');
+        $statement = is_subclass_of($bag, 'Yriveiro\Collection\Collection');
         $this->assertTrue($statement);
     }
 

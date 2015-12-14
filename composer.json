@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "yriveiro\\Collection\\": "src/"
+            "Yriveiro\\Collection\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "yriveiro\\Collection\\Tests\\": "tests/"
+            "Yriveiro\\Collection\\Tests\\": "tests/"
         }
     }
 }

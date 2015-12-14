@@ -1,9 +1,9 @@
 <?php
-namespace yriveiro\Collection;
+namespace Yriveiro\Collection;
 
 use Closure;
 use ArrayIterator;
-use yriveiro\Collection\CollectionInterface;
+use Yriveiro\Collection\CollectionInterface;
 
 class Collection implements CollectionInterface
 {
@@ -23,7 +23,7 @@ class Collection implements CollectionInterface
      * @param string $key
      * @param mixed|null $value
      *
-     * @return yriveiro\Collection\Collection
+     * @return Yriveiro\Collection\Collection
      */
     public function set($key, $value = null)
     {
@@ -70,7 +70,7 @@ class Collection implements CollectionInterface
      *
      * @param string $key
      *
-     * @return yriveiro\Collection\Collection
+     * @return Yriveiro\Collection\Collection
      */
     public function remove($key)
     {
@@ -82,7 +82,7 @@ class Collection implements CollectionInterface
     /**
      *  Remove all items in the collection.
      *
-     * @return yriveiro\Collection\Collection
+     * @return Yriveiro\Collection\Collection
      */
     public function clear()
     {
@@ -122,7 +122,7 @@ class Collection implements CollectionInterface
      *                          The callable format must be arguments injected
      *                          are: [$key, $item]
      *
-     * @return yriveiro\Collection\Collection
+     * @return Yriveiro\Collection\Collection
      */
     public function each(Closure $callable)
     {

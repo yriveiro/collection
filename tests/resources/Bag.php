@@ -1,7 +1,7 @@
 <?php
-namespace yriveiro\Collection\Tests\Resources;
+namespace Yriveiro\Collection\Tests\Resources;
 
-use yriveiro\Collection\Collection;
+use Yriveiro\Collection\Collection;
 
 class Bag extends Collection
 {

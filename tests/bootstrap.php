@@ -1,4 +1,4 @@
 <?php
-namespace yriveiro\Collection\Tests;
+namespace Yriveiro\Collection\Tests;
 
 require __DIR__ . '/../vendor/autoload.php';
