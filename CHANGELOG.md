@@ -1,4 +1,4 @@
-0.3.0
+0.4.0
 -----
 
--	Deprecate method apply in favour of each.
+-	Capitalize correctly the namespace package.
